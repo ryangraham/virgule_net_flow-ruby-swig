@@ -1,0 +1,15 @@
+I wanted to play with trust networks in a Rails site. So I pulled a copy of Raph Levien's net_flow.c from Advogato. I'll probably just switch to igraph or Relax4 though.
+
+ruby extconf.rb
+make
+make install
+
+irb
+require 'net_flow'
+Net_flow.methods
+
+should yield something like...
+irb(main):002:0> Net_flow.methods
+=> [:virgule_net_flow_new, :virgule_net_flow_free, :virgule_net_flow_find_node, :virgule_net_flow_node_name, :virgule_net_flow_add_edge, :virgule_net_flow_assign_tree, :virgule_net_flow_sanity_check_tree, :virgule_net_flow_max_flow, :virgule_net_flow_sanity_check, :virgule_net_flow_extract,...
+
+
